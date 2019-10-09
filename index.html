@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script>
+    let link = document.createElement('link'), style = document.createElement('style')
+    link.rel = 'stylesheet'
+    if (/Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)) {
+      link.href = 'mobile.css'
+      height = window.innerWidth / 1.5
+      style.innerHTML = `
+      #loop .window {
+        height: ${height}px;
+      }`
+      document.head.appendChild(style)
+    } else {
+      link.href = 'style.css'
+    }
+    document.head.appendChild(link)
+  </script>
+  <script src="//at.alicdn.com/t/font_803749_mam6ylngf2.js"></script>
+  <title>Slides</title>
+</head>
+
+<body>
+  <header>
+    <div class="header-inner">
+      <h1>Slides</h1>
+      <ul>
+        <li>
+          <a href="//caijialinxx.github.io/resume/" target="_blank">
+            <svg class="icon" aria-hidden="true">
+              <use xlink:href="#icon-more"></use>
+            </svg>
+          </a>
+        </li>
+        <li>
+          <a href="//github.com/Caijialinxx/" target="_blank">
+            <svg class="icon" aria-hidden="true">
+              <use xlink:href="#icon-github"></use>
+            </svg>
+          </a>
+        </li>
+        <li>
+          <a href="//caijialinxx.github.io/" target="_blank">
+            <svg class="icon" aria-hidden="true">
+              <use xlink:href="#icon-blog"></use>
+            </svg>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </header>
+  <article class="wrapper">
+    <section id="loop">
+      <h2>Loop模式</h2>
+      <div class="window">
+        <div id="images" class="images">
+          <img src="./images/num1.jpeg" alt="num1.jpeg" title="num1.jpeg" class="enter" />
+          <img src="./images/num2.jpeg" alt="num2.jpeg" title="num2.jpeg" class="standby" />
+          <img src="./images/num3.jpeg" alt="num3.jpeg" title="num3.jpeg" class="leave" />
+        </div>
+        <div class="buttons">
+          <div id="prev">
+            <svg class="icon" aria-hidden="true">
+              <use xlink:href="#icon-left"></use>
+            </svg>
+          </div>
+          <div id="next">
+            <svg class="icon" aria-hidden="true">
+              <use xlink:href="#icon-right"></use>
+            </svg>
+          </div>
+        </div>
+        <div class="items">
+          <span class="active"></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+    </section>
+    <section id="thumb">
+      <h2>缩略图模式</h2>
+      <div class="thumbSlides_wrapper">
+        <div class="window">
+          <div class="images">
+            <img src="./images/num1.jpeg" alt="num1">
+            <img src="./images/num2.jpeg" alt="num2">
+            <img src="./images/num3.jpeg" alt="num3">
+          </div>
+        </div>
+        <div class="controller">
+          <div class="thumbWindow"></div>
+          <ul id="thumbBtns">
+            <li class="active"></li>
+            <li></li>
+            <li></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </article>
+  <footer>Made by <a href="//caijialinxx.github.io/resume/" target="_blank">Caijialinxx</a>
+    | View source on <a href="//github.com/Caijialinxx/Slides" target="_blank">GitHub</a>
+  </footer>
+  <script src="//code.jquery.com/jquery-3.3.1.min.js"></script>
+  <script src="main.js"></script>
+</body>
+
+</html>
